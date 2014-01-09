@@ -1,0 +1,196 @@
+/* CSS Document */
+
+body {
+    background-color:#FFB200;
+	/*font-size: 1em;
+    line-height: 1.4;*/
+}
+
+.headerAdmin{
+	background-color:#FFB211;
+	font-size: 3em;
+	text-align:center;
+}
+
+.contentItems .content{
+   margin-top:40px;	
+}
+
+blockquote {
+	
+	background-color:rgba(255,255,255,0.2);
+	margin: 1em;
+	padding: 2em 1.5em;
+	border-radius: 0 1.5em 1.5em 1.5em;
+	box-shadow: black 5px 5px 10px;
+}
+
+.editableRow .saving{
+	background-color:orange !important;	
+}
+.editableRow .saved{
+	background-color:green !important;	
+}
+.editableRow .error{
+	background-color:red !important; 	
+}
+
+h1
+{
+	font-size: 1.5em;
+	font-weight: normal;
+	margin: 0;
+}
+
+h2
+{
+	font-size: 1.3em;
+	font-weight: normal;
+	margin: 2em 0 0 0;
+}
+
+p
+{
+	margin: 0.6em 0;
+}
+
+.tabs{
+	/*display:inline-block;*/
+	margin-left:16px;
+}
+
+.tabs li { 
+  /* Makes a horizontal row */
+  float: left; 	
+  /* So the psueudo elements can be
+     abs. positioned inside */
+  position: relative; 
+}
+.tabs a { 
+  /* Make them block level
+     and only as wide as they need */
+  float: left; 
+  padding: 10px 40px; 
+  text-decoration: none;
+  
+  /* Default colors */ 
+  color: black;
+  background: rgb(255, 217, 129); 
+   
+  /* Only round the top corners */
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
+}
+.tabs .active {
+  /* Highest, active tab is on top */
+  z-index: 3;
+}
+.tabs .active a { 
+  /* Colors when tab is active */
+  background: #FEC033; 
+  color: black; 
+}
+.tabs li:before, .tabs li:after, 
+.tabs li a:before, .tabs li a:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0;
+}
+/* Only the first, last, and active
+   tabs need pseudo elements at all */
+.tabs li:last-child:after,   .tabs li:last-child a:after,
+.tabs li:first-child:before, .tabs li:first-child a:before,
+.tabs .active:after,   .tabs .active:before, 
+.tabs .active a:after, .tabs .active a:before {
+  content: "";
+}
+.tabs .active:before, .tabs .active:after {
+  background: white; 
+  
+  /* Squares below circles */
+  z-index: 1;
+}
+/* Squares */
+.tabs li:before, .tabs li:after {
+  background: #ddc385;
+  width: 10px;
+  height: 10px;
+}
+.tabs li:before {
+  left: -10px;      
+}
+.tabs li:after { 
+  right: -10px;
+}
+/* Circles */
+.tabs li a:after, .tabs li a:before {
+  width: 20px; 
+  height: 20px;
+  /* Circles are circular */
+  -webkit-border-radius: 10px;
+  -moz-border-radius:    10px;
+  border-radius:         10px;
+  background: #222;
+  
+  /* Circles over squares */
+  z-index: 2;
+}
+.tabs .active a:after, .tabs .active a:before {
+  background: #ddc385;
+}
+/* First and last tabs have different
+   outside color needs */
+.tabs li:first-child.active a:before,
+.tabs li:last-child.active a:after {
+  background: #222;
+}
+.tabs li a:before {
+  left: -20px;
+}
+.tabs li a:after {
+  right: -20px;
+}
+
+p.tabnav
+{
+	font-size: 1.1em;
+	text-transform: uppercase;
+}
+
+p.tabnav a
+{
+	text-decoration: none;
+	color: #999;
+}
+
+.contentprijzen{ 
+	width: 80%; 
+	text-align: left;
+	color: black;
+}
+
+.contentprijzen tr.d0 td.d0 { 
+	background-color:#FED87F;
+}
+
+.contentprijzen tr.d1 td.d0 { 
+	background-color:#FED066;
+}
+
+.contentprijzen tr.d0 td.d1 { 
+	background-color:#f9d78e;
+}
+
+.contentprijzen tr.d1 td.d1 { 
+	background-color:#f9e0a9;
+}
+
+thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
